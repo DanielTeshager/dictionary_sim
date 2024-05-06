@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Python Dictionary Simulation</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static', filename='styles.css') }}"
+		/>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="{{ url_for('static', filename='script.js') }}"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Python Dictionary Simulation</h1>
+			<div class="input-section">
+				<input
+					type="text"
+					id="dict-input"
+					placeholder="Enter key-value pairs (comma-separated)"
+				/>
+				<button id="submit-btn">Insert</button>
+				<button id="lookup-btn">Lookup</button>
+				<button id="delete-btn">Delete</button>
+			</div>
+			<div class="simulation-section">
+				<div class="step" id="step1">
+					<h3>Step 1: Convert Keys to Hash Values</h3>
+					<div id="key-hashing" class="box-container"></div>
+				</div>
+				<div class="step" id="step2">
+					<h3>Step 2: Find Slot for Each Hash Value</h3>
+					<div id="modulo-calculation" class="box-container"></div>
+				</div>
+				<div class="step" id="step3">
+					<h3>Step 3: Insert Keys into dk_indices</h3>
+					<div id="dk-indices" class="table-container">
+						{% for i in range(7) %}
+						<div class="slot" id="dk-index-{{ i }}">
+							<div class="slot-index">{{ i }}</div>
+							<div class="slot-content"></div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="step" id="step4">
+					<h3>Step 4: Mirror Slots to dk_entries</h3>
+					<div id="dk-entries" class="table-container">
+						{% for i in range(7) %}
+						<div class="slot" id="dk-entry-{{ i }}">
+							<div class="slot-index">{{ i }}</div>
+							<div class="slot-content"></div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="step" id="step5">
+					<h3>Step 5: Memory References</h3>
+					<div id="memory-references" class="box-container"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
