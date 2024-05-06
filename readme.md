@@ -30,9 +30,9 @@ Through an interactive and visual approach, this application provides a hands-on
 ### Installation
 
 1. Clone the project repository:
-   `git clone https://github.com/your-username/dictionary-app.git`
+   `git clone https://github.com/DanielTeshager/dictionary_sim.git`
 2. Navigate to the project directory:
-   `cd dictionary-app`
+   `cd dictionary_sim`
 3. Install the required Python packages:
    `pip install -r requiremnts.txt`
 
