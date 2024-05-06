@@ -2,7 +2,7 @@
 
 Flask==3.0.3
 selenium==4.20.0
-
+pytest
 hf-webdriver-manager==0.2.1
 py-webdriver-manager==0.0.3
 semly-webdriver-manager-fork==4.0.1
